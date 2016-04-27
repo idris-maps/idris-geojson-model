@@ -59,6 +59,26 @@ returns
   { value: 'Antarctica', count: 1 } ]
 ```
 
+### .propertyTable
+
+```
+c.propertyTable
+```
+
+returns
+
+```
+[
+ [ 'index', 'NAME', 'ABBREV', 'ISO_A2', 'ISO_A3', 'CONTINENT', 'SUBREGION' ]
+ [ 0, 'Aruba', 'Aruba', 'AW', 'ABW', 'North America', 'Caribbean' ]
+ [ 1, 'Afghanistan', 'Afg.', 'AF', 'AFG', 'Asia', 'Southern Asia' ]
+ [ 2, 'Angola', 'Ang.', 'AO', 'AGO', 'Africa', 'Middle Africa' ]
+ [ 3, 'Anguilla', 'Ang.', 'AI', 'AIA', 'North America', 'Caribbean' ]
+ 
+ // ...
+]
+```
+
 ### .searchByProperty(key, value)
 
 ```
@@ -119,6 +139,10 @@ returns
   { type: 'MultiPolygon', features: [ [Object], [Object] ] } ]
 ```
 
+## Modify the model
+
+None of the methods above change anything on the underlying model. The following do.
+
 ### .addFeature(feature)
 
 Takes a GeoJSON feature as argument and adds it to the model
@@ -130,3 +154,19 @@ Takes an index value as argument and removes it from the model
 ### .removeFeatures(indexes)
 
 Takes an Array of indexes and removes them from the model
+
+### .removeProperty(propertyToRemove)
+
+Takes a property as argument and removes it on all features of the model
+
+### .removeProperties(propertiesToRemove)
+
+Takes an Array of properties as argument and removes them on all features of the model
+
+### .setFeatureProperty(index, key, val)
+
+Takes the index of the feature, a property key and value
+
+### .JSON()
+
+Returns a FeatureCollection. To be used to retrieve the new collection after the model has been modified.
