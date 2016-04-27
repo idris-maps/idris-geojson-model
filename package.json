@@ -1,6 +1,6 @@
 {
   "name": "idris-geojson-model",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "GeoJSON utilities",
   "main": "test.js",
   "scripts": {
@@ -12,7 +12,8 @@
     "turf-intersect": "^1.4.2"
   },
   "keywords": [
-    "GeoJSON", "utility"
+    "GeoJSON",
+    "utility"
   ],
   "repository": {
     "type": "git",
