@@ -1,0 +1,17 @@
+{
+  "name": "karto_v2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "turf-intersect": "^1.4.2"
+  },
+  "devDependencies": {
+    "jsonfile": "^2.3.0"
+  }
+}
