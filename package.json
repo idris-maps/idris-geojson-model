@@ -1,6 +1,6 @@
 {
   "name": "idris-geojson-model",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "main": "test.js",
   "scripts": {
@@ -10,9 +10,9 @@
   "license": "ISC",
   "dependencies": {
     "turf-intersect": "^1.4.2"
-  },  
+  },
   "repository": {
-   "type": "git",
-   "url": "https://github.com/idris-maps/idris-geojson-model"
+    "type": "git",
+    "url": "https://github.com/idris-maps/idris-geojson-model"
   }
 }
