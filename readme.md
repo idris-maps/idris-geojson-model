@@ -141,31 +141,49 @@ returns
 
 ## Modify the model
 
-None of the methods above change anything on the underlying model. The following do.
+None of the methods above change anything on the underlying model. The following do. They also emit events that you can listen to like this:
+
+```
+c.event.on('event-name', function() {
+	// do whatever when event is emitted
+})
+```
 
 ### .addFeature(feature)
 
-Takes a GeoJSON feature as argument and adds it to the model
+Takes a GeoJSON feature as argument and adds it to the model.
+
+Emits an ```'add'``` event.
 
 ### .removeFeature(index)
 
-Takes an index value as argument and removes it from the model
+Takes an index value as argument and removes it from the model.
+
+Emits a ```'remove'``` event.
 
 ### .removeFeatures(indexes)
 
-Takes an Array of indexes and removes them from the model
+Takes an Array of indexes and removes them from the model.
+
+Emits an ```'remove'``` event.
 
 ### .removeProperty(propertyToRemove)
 
-Takes a property as argument and removes it on all features of the model
+Takes a property as argument and removes it on all features of the model.
+
+Emits a ```'remove-property'``` event.
 
 ### .removeProperties(propertiesToRemove)
 
-Takes an Array of properties as argument and removes them on all features of the model
+Takes an Array of properties as argument and removes them on all features of the model.
+
+Emits a ```'remove-property'``` event.
 
 ### .setFeatureProperty(index, key, val)
 
-Takes the index of the feature, a property key and value
+Takes the index of the feature, a property key and value.
+
+Emits a ```'set-property'``` event.
 
 ### .JSON()
 
